@@ -21,3 +21,15 @@
   font-family: var(--font);
   font-size: 16px;
 }
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-gray);
+}
+
+ul li {
+  list-style: none;
+}
