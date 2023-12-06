@@ -1,10 +1,11 @@
 import styles from './App.module.css';
-import { TextContainer } from './containers/exports';
+import { ImgContainer, TextContainer } from './containers/exports';
 
 function App() {
   return (
     <main className={styles.container}>
       <TextContainer />
+      <ImgContainer />
     </main>
   );
 }
