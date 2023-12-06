@@ -1,8 +1,20 @@
-.text {
-}
-
 .text h1 {
   font-size: 3rem;
   color: var(--dark-gray);
   margin-bottom: 1.4rem;
+}
+
+.text p {
+  margin-bottom: 1.4rem;
+}
+
+.text ul li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.text ul {
+  margin-bottom: 3.5rem;
 }
