@@ -1,0 +1,8 @@
+.text {
+}
+
+.text h1 {
+  font-size: 3rem;
+  color: var(--dark-gray);
+  margin-bottom: 1.4rem;
+}
