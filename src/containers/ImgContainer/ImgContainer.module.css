@@ -1,3 +1,10 @@
 .image {
   flex: 1;
+  overflow: hidden;
+  min-height: 530px;
+  width: 450px;
+  border-radius: 10px;
+  background: url('../../../public/images/illustration-sign-up-desktop.svg')
+    center no-repeat;
+  background-size: cover;
 }
