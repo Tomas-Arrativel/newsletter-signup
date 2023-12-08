@@ -7,6 +7,13 @@ const Form = () => {
     handleSubmit,
     formState: { errors },
   } = useForm();
+
+  const emailError = {
+    backgroundColor: 'hsla(4, 100%, 67%, 0.4)',
+    borderColor: 'hsla(4, 100%, 67%)',
+    color: 'rgb(213, 81, 72)',
+    fontWeight: 700,
+  };
   return (
     <form
       className={styles.form__container}
@@ -14,12 +21,18 @@ const Form = () => {
     >
       <label>
         Email address{' '}
-        {errors.email?.type === 'required' ||
-          (errors.email?.type === 'pattern' && (
-            <p className={styles.error}>Email is required</p>
-          ))}
+        {errors.email?.type === 'required' && (
+          <p className={styles.error}>Email is required</p>
+        )}
+        {errors.email?.type === 'pattern' && (
+          <p className={styles.error}>Email is not correct</p>
+        )}
       </label>
       <input
+        style={{
+          ...(errors.email?.type === 'pattern' && emailError),
+          ...(errors.email?.type === 'required' && emailError),
+        }}
         type='text'
         {...register('email', {
           required: true,

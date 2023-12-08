@@ -6,6 +6,9 @@
 .form__container label {
   font-weight: 700;
   margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .form__container input[type='text'] {
@@ -31,4 +34,13 @@
 
 .form__container input[type='submit']:hover {
   background: linear-gradient(to left, rgb(255, 137, 74), var(--tomato));
+}
+
+.error {
+  color: var(--tomato);
+}
+
+input .error {
+  border-color: var(--tomato);
+  background-color: rgb(213, 81, 72);
 }
