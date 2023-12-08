@@ -8,6 +8,12 @@ const Form = () => {
     formState: { errors },
   } = useForm();
 
+  const onSubmit = (data: any) => (
+    <p style={{ color: '#afd' }}>
+      {data.email} has successfully subscribed to monthly newsletter
+    </p>
+  );
+
   const emailError = {
     backgroundColor: 'hsla(4, 100%, 67%, 0.4)',
     borderColor: 'hsla(4, 100%, 67%)',
@@ -17,7 +23,7 @@ const Form = () => {
   return (
     <form
       className={styles.form__container}
-      onSubmit={handleSubmit((data) => console.log(data))}
+      onSubmit={handleSubmit((data) => onSubmit(data))}
     >
       <label>
         Email address{' '}
