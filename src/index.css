@@ -34,3 +34,9 @@ body {
 ul li {
   list-style: none;
 }
+
+@media (max-width: 860px) {
+  * {
+    font-size: 14px;
+  }
+}
