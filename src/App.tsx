@@ -12,7 +12,7 @@ function App() {
   return (
     <main className={styles.container}>
       {active ? (
-        <SuccessContainer setActive={setActive} />
+        <SuccessContainer setActive={setActive} data={data} />
       ) : (
         <>
           <TextContainer setActive={setActive} setData={setData} />
