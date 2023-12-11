@@ -1,18 +1,23 @@
+import { Dispatch, SetStateAction, useState } from 'react';
 import styles from './Form.module.css';
 import { useForm } from 'react-hook-form';
 
-const Form = () => {
+interface FormProps {
+  setActive: Dispatch<SetStateAction<boolean>>;
+  setData: Dispatch<SetStateAction<any>>;
+}
+
+const Form = ({ setActive, setData }: FormProps) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data: any) => (
-    <p style={{ color: '#afd' }}>
-      {data.email} has successfully subscribed to monthly newsletter
-    </p>
-  );
+  const onSubmit = (data: any) => {
+    setActive(true);
+    setData(data);
+  };
 
   const emailError = {
     backgroundColor: 'hsla(4, 100%, 67%, 0.4)',

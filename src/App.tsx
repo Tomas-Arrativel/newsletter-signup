@@ -1,11 +1,24 @@
+import { useState } from 'react';
 import styles from './App.module.css';
-import { ImgContainer, TextContainer } from './containers/exports';
+import {
+  ImgContainer,
+  SuccessContainer,
+  TextContainer,
+} from './containers/exports';
 
 function App() {
+  const [active, setActive] = useState<boolean>(false);
+  const [data, setData] = useState();
   return (
     <main className={styles.container}>
-      <TextContainer />
-      <ImgContainer />
+      {active ? (
+        <SuccessContainer setActive={setActive} />
+      ) : (
+        <>
+          <TextContainer setActive={setActive} setData={setData} />
+          <ImgContainer />
+        </>
+      )}
     </main>
   );
 }
