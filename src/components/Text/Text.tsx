@@ -7,15 +7,15 @@ const Text = () => {
       <p>Join 60,000+ product managers receiving monthly updates on:</p>
       <ul className={styles.list}>
         <li>
-          <img src='public/images/icon-list.svg' /> Product discovery and
-          building what matters
+          <img src='images/icon-list.svg' alt='Check list icon' />
+          Product discovery and building what matters
         </li>
         <li>
-          <img src='public/images/icon-list.svg' />
+          <img src='images/icon-list.svg' alt='Check list icon' />
           Measuring to ensure updates are a success
         </li>
         <li>
-          <img src='public/images/icon-list.svg' />
+          <img src='images/icon-list.svg' alt='Check list icon' />
           And much more!
         </li>
       </ul>
